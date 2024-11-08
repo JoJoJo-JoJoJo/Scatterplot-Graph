@@ -27,7 +27,10 @@ const loadSVG = async () => {
     ({ Year }: DataProps) => Year
   );
 
-  const x = d3.scaleLinear().domain([xMin - 1, xMax + 1]).range([0, width]);
+  const x = d3
+    .scaleLinear()
+    .domain([xMin - 1, xMax + 1])
+    .range([0, width]);
 
   const [yMin = 2200, yMax = 2500] = d3.extent(
     data,
@@ -51,7 +54,11 @@ const loadSVG = async () => {
     .append("legend")
     .attr("id", "legend")
     .attr("class", "desc-legend")
-    .text("Legend");
+    .html(`
+      <strong>Doping allegations:</strong> Red
+      <br>
+      <strong>No doping allegations:</strong> Blue
+      `);
 
   svg
     .append("g")

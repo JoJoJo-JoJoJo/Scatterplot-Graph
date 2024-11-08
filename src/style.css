@@ -58,3 +58,10 @@ body {
   position: absolute;
   z-index: 1;
 }
+
+.desc-legend {
+  background-color: #363636;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+  padding: 5px;
+}
